@@ -12,14 +12,26 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AvatarModule } from 'ngx-avatars';
+import { HttpClientModule } from '@angular/common/http';
+import { BusComponent } from './Componentes/bus/bus.component';
+import { ViajeComponent } from './Componentes/viaje/viaje.component';
+import { PasajeroComponent } from './Componentes/pasajero/pasajero.component';
+import { ChoferComponent } from './Componentes/chofer/chofer.component';
+import { MpagoComponent } from './Componentes/mpago/mpago.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VELOTAXComponent,
-    MenuComponent
+    MenuComponent,
+    BusComponent,
+    ViajeComponent,
+    PasajeroComponent,
+    ChoferComponent,
+    MpagoComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -28,7 +40,8 @@ import { AvatarModule } from 'ngx-avatars';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AvatarModule,
+    AvatarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

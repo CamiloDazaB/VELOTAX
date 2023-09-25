@@ -15,3 +15,22 @@
   top: 0;
   z-index: 1;
 }
+
+.avatar-container {
+
+display: flex;
+align-items: center;
+margin-left: auto;
+
+}
+
+.avatar-container ngx-avatar {
+
+margin-left: 8px;
+
+}
+
+.mat-toolbar{
+background-color: blue;
+
+}
