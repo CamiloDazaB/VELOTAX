@@ -7,28 +7,43 @@
 
     <mat-nav-list>
       <a mat-list-item href="#">LOGIN</a>
-      <a mat-list-item href="#">Bus</a>
-      <a mat-list-item href="#">Chofer</a>
-      <a mat-list-item href="#">MPago</a>
-      <a mat-list-item href="#">Viaje</a>
-      <a mat-list-item href="#">Pasajero</a>
+      <a mat-list-item href="/bus">Bus</a>
+      <a mat-list-item href="/chofer">Chofer</a>
+      <a mat-list-item href="/mpago">MPago</a>
+      <a mat-list-item href="/viaje">Viaje</a>
+      <a mat-list-item href="/pasajero">Pasajero</a>
       
     </mat-nav-list>
   </mat-sidenav>
-
+ 
   <mat-sidenav-content>
+
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <button  type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+
+        
       </button>
-      <span>VELOTAX</span>
+
+   
+
+
+      <span> VELOTAX<mat-icon aria-hidden="true" aria-label="example home icon" fontIcon="train" color="white">train</mat-icon></span>
+
+      <div class="avatar-container">
+        <ngx-avatars name="Camilo Daza"></ngx-avatars>
+        <ngx-avatars name="Michael Galeano"></ngx-avatars>
+      </div>
       
+
+   
     </mat-toolbar>
+
+    <div class="container">
+    </div>
+
+    <router-outlet></router-outlet>
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>
