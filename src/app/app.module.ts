@@ -18,6 +18,17 @@ import { ViajeComponent } from './Componentes/viaje/viaje.component';
 import { PasajeroComponent } from './Componentes/pasajero/pasajero.component';
 import { ChoferComponent } from './Componentes/chofer/chofer.component';
 import { MpagoComponent } from './Componentes/mpago/mpago.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -40,8 +51,18 @@ import { MpagoComponent } from './Componentes/mpago/mpago.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AvatarModule
-
+    AvatarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogModule
+  
+,
   ],
   providers: [],
   bootstrap: [AppComponent]

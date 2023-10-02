@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class RestService {
 
   constructor(public api: HttpClient) { }
@@ -12,13 +13,15 @@ export class RestService {
 Url="https://localhost:7238/api/"
 
   public async Get(controller: string){
+    var result:any
   await this.api.get(this.Url+controller).toPromise().then((res)=>{
 
     console.log(res);
+    result = res 
 
 
   });
- 
+ return result;
 }
 
 public async Put(body:any,controller: string,id:String){
